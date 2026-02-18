@@ -86,7 +86,7 @@ df_filtered.plot(kind = 'scatter',
 **Initial Observations:**
 * Slight positive correlation
 * Sweet spot of 20-100 achievements
-* Single outlier at 1 achievement (likely CS2)
+* Single outlier at 1 achievement
 * Beyond ~100(10^2) achievements, popularity becomes highly dispersed.
 
 **Take-aways:**
