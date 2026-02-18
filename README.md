@@ -91,7 +91,7 @@ df_filtered.plot(kind = 'scatter',
 
 **Take-aways:**
 
-Whilst there is a clear correlation between achievement count and popularity, high achievement counts do not guaruntee success. Futhermore, achievement count may be a proxy variable for other factors such as: 
+Whilst there is a clear correlation between achievement count and popularity, high achievement counts do not guaruntee success. Futhermore, I've realised that achievement count may be a proxy variable for other factors such as: 
 * Developmental scale/budget
 * Game length
 * Structured progression
