@@ -25,16 +25,21 @@ When analysing popularity by genre, an important distinction emerges between tot
 
 ```python
 #Bar chart Visualisation of most popular genres (Raw)
-top_genres = df_exploded.groupby('genres')['popularity'].mean().sort_values(ascending=False).head(20)
-top_genres.plot(kind='bar', title='Top 20 Genres by Average Popularity')
+top_genres = df_exploded.groupby('genres')['popularity'].sum().sort_values(ascending=False).head(20)
+top_genres.plot(kind='bar', 
+                title='Top 20 Genres by Raw Popularity',
+                color=plt.cm.tab20.colors[:len(top_genres)])
 ```
 ```python
 #Bar chart Visualisation of most popular genres (Average)
-top_genres = df_exploded.groupby('genres')['popularity'].sum().sort_values(ascending=False).head(20)
-top_genres.plot(kind='bar', title='Top 20 Genres by Raw Popularity')
+top_genres = df_exploded.groupby('genres')['popularity'].mean().sort_values(ascending=False).head(20)
+top_genres.plot(kind='bar', 
+                title='Top 20 Genres by Average Popularity',
+                color=plt.cm.tab20.colors[:len(top_genres)])
 ```
 
-<img width="1454" height="770" alt="image" src="https://github.com/user-attachments/assets/4f2cfd3c-a2b2-42b4-919e-e1b5a41f0d6c" />
+<img width="1221" height="648" alt="image" src="https://github.com/user-attachments/assets/13b923b2-2835-49c0-9eeb-ebf7a6334f7a" />
+
 
 
 ### **Initial Observations:**
@@ -66,21 +71,23 @@ top_genres.plot(kind='bar', title='Top 20 Genres by Raw Popularity')
 
 ``` python
 #Scatter plot to represent correlation between popularity and achievements
-df_filtered.plot(kind = 'scatter', 
-                 x = 'achievements', 
-                 y = 'popularity', 
-                 xlabel='Number of Achievements', 
-                 ylabel='Popularity', 
-                 title='Scatter Plot of Achievements vs Popularity', 
-                 s=20, 
-                 c='blue', 
-                 alpha=0.4, 
-                 figsize=(10,6), 
-                 logy=True, 
+df.plot(kind = 'scatter',
+                 x = 'achievements',
+                 y = 'popularity',
+                 xlabel='Number of Achievements',
+                 ylabel='Popularity',
+                 title='Scatter Plot of Achievements vs Popularity',
+                 s=20,
+                 c=df['name'].astype('category').cat.codes, 
+                 cmap='tab20',
+                 alpha=0.6,
+                 figsize=(14,6),
+                 logy=True,
                  logx=True)
 ```
 
-<img width="849" height="552" alt="image" src="https://github.com/user-attachments/assets/d5bafa89-1fbb-4025-8459-2306c1940672" />
+<img width="978" height="544" alt="image" src="https://github.com/user-attachments/assets/91297103-0923-4b95-ad57-84f274da40dc" />
+
 
 
 **Initial Observations:**
