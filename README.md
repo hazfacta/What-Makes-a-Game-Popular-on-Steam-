@@ -110,6 +110,8 @@ So perhaps directly correlating achievements to popularity is not the most usefu
 ## **What I'm working on:**
 * Release Window section -best dates to release games
 * Pricing section -how much can you charge before popularity drops off
+* Categories
+* Developers
 * More detailed visualisations (trend lines etc.)
 * Individual Case-studies
 
