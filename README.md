@@ -1,4 +1,4 @@
-# Analyzing Popularity Trends in Steam Games
+# Analysing Popularity Trends in Steam Games
 
 ## **How to define popularity?**
 
