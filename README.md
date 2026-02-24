@@ -40,20 +40,37 @@ When analysing popularity by genre, an important distinction emerges between tot
 
 ```python
 #Bar chart Visualisation of most popular genres (Raw)
-top_genres = df_exploded.groupby('genres')['popularity'].sum().sort_values(ascending=False).head(20)
-top_genres.plot(kind='bar', 
-                title='Top 20 Genres by Raw Popularity',
-                color=plt.cm.tab20.colors[:len(top_genres)])
+top_genres_raw = (
+    df_exploded.groupby('genres')['popularity']
+    .sum()
+    .sort_values(ascending=False)
+    .head(20)
+)
+
+top_genres_raw.plot(
+    kind='bar',
+    title='Top 20 Genres by Raw Popularity',
+    color=[genre_color_map[g] for g in top_genres_raw.index]
+)
 ```
 ```python
 #Bar chart Visualisation of most popular genres (Average)
-top_genres = df_exploded.groupby('genres')['popularity'].mean().sort_values(ascending=False).head(20)
-top_genres.plot(kind='bar', 
-                title='Top 20 Genres by Average Popularity',
-                color=plt.cm.tab20.colors[:len(top_genres)])
+top_genres_avg = (
+    df_exploded.groupby('genres')['popularity']
+    .mean()
+    .sort_values(ascending=False)
+    .head(20)
+)
+
+top_genres_avg.plot(
+    kind='bar',
+    title='Top 20 Genres by Average Popularity',
+    color=[genre_color_map[g] for g in top_genres_avg.index]
+)
 ```
 
-<img width="1221" height="648" alt="image" src="https://github.com/user-attachments/assets/13b923b2-2835-49c0-9eeb-ebf7a6334f7a" />
+<img width="1325" height="701" alt="image" src="https://github.com/user-attachments/assets/401f9695-6c3c-4e14-beee-c2b4e804e2af" />
+
 
 
 
