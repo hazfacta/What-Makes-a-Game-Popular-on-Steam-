@@ -40,8 +40,7 @@ When analysing popularity by genre, an important distinction emerges between tot
 
 ```python
 #Bar chart Visualisation of most popular genres (Raw)
-top_genres_raw = (df_exploded.groupby('genres')['popularity']
-.sum().sort_values(ascending=False).head(20))
+top_genres_raw = (df_exploded.groupby('genres')['popularity'].sum().sort_values(ascending=False).head(20))
 
 top_genres_raw.plot(
     kind='bar',
@@ -50,8 +49,7 @@ top_genres_raw.plot(
 ```
 ```python
 #Bar chart Visualisation of most popular genres (Average)
-top_genres_avg = (df_exploded.groupby('genres')['popularity']
-.mean().sort_values(ascending=False).head(20))
+top_genres_avg = (df_exploded.groupby('genres')['popularity'].mean().sort_values(ascending=False).head(20))
 
 top_genres_avg.plot(
     kind='bar',
