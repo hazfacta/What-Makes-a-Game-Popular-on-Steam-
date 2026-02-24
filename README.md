@@ -46,8 +46,7 @@ top_genres_raw = (df_exploded.groupby('genres')['popularity']
 top_genres_raw.plot(
     kind='bar',
     title='Top 20 Genres by Raw Popularity',
-    color=[genre_color_map[g] for g in top_genres_raw.index]
-)
+    color=[genre_color_map[g] for g in top_genres_raw.index])
 ```
 ```python
 #Bar chart Visualisation of most popular genres (Average)
@@ -57,8 +56,7 @@ top_genres_avg = (df_exploded.groupby('genres')['popularity']
 top_genres_avg.plot(
     kind='bar',
     title='Top 20 Genres by Average Popularity',
-    color=[genre_color_map[g] for g in top_genres_avg.index]
-)
+    color=[genre_color_map[g] for g in top_genres_avg.index])
 ```
 
 <img width="1325" height="701" alt="image" src="https://github.com/user-attachments/assets/401f9695-6c3c-4e14-beee-c2b4e804e2af" />
